@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<include file="Public/head"/>
+</head>
+<body>
+<include file="Public/header"/>
+  <!-- 二级栏目结束 -->
+  <!-- 内容开始 -->
+   <div class="article_main">
+   	<!-- 左侧 -->
+   	  <div class="wz_main">
+   	  	 <div class="wz_main1">
+          <b>搜索结果</b>
+          <p>
+           <a href="{:U('Home/Index/index')}">主页</a>>
+           
+           <a href="#">搜索结果</a>
+          </p>
+         </div>
+   	  	
+   	  	 <div id="content">
+   	  	 	<dl class="lists">
+            <volist name="data" id="vo" empty="暂时没有您要搜索的数据">
+   	  	 		<dt>{$vo.title}</dt>
+   	  	 		<dd>{$vo.description}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【阅读全文】</a></dd>
+         </volist>
+				
+   	  	 	</dl>
+            
+   	  	 	<!-- <div class="page">1 2 3 </div> -->
+   	  	 </div>
+   	  <!-- 	 <div class="wz_main03">
+   	  	 	<p>热门关键词:</p>
+   	  	 	<ul>
+   	  	 	  <volist name="hotkey" id="vo">
+             <li><a href="">{$vo.title}</a></li>
+            </volist>
+   	  	 	</ul>
+   	  	 </div> -->
+   	  	 <div class="zzgh_1">
+   	  	 	<div class="zzgh_2">
+   	  	 	   <dl>
+   	  	 	     <dd><img src="__IMG__/zayy/article_gh01.jpg"></dd>
+   	  	 	     <dt>
+   	  	 	     	<p>如果您不确定自己的症状应该如何挂号,欢迎您点击</p>
+   	  	 	     	<span><a href=""><img src="__IMG__/zayy/article_gh02.jpg"></a></span>
+   	  	 	     </dt>
+   	  	 	   </dl>
+   	  	 	</div>
+   	  	 	<div class="zzgh_3">
+   	  	 	  <ul>
+   	  	 	  	<form action="" method="">
+   	  	 	  	  <li><span><b>*</b>就诊姓名:</span>
+   	  	 	  	  	  <input type="text" class="zzgh_1_1" name="">
+   	  	 	  	  </li>
+   	  	 	  	  <li>
+   	  	 	  	  	<span><b>*</b>性别</span>
+   	  	 	  	  	<input type="radio" class="dxan" name="sex">女
+   	  	 	  	  	<input type="radio" class="dxan" name="sex">男
+   	  	 	  	  </li>
+   	  	 	  	  <li><span><b>*</b>联系电话:</span>
+   	  	 	  	  	  <input type="text" class="zzgh_1_1" name="">
+   	  	 	  	  </li>
+   	  	 	  	  <li><span><b>*</b>病情描述:</span>
+   	  	 	  	  	  <textarea class="zzgh_1_2"></textarea>
+   	  	 	  	  </li>
+   	  	 	  	  <li><input type="button" class="zzgh_1_3"></li>
+   	  	 	  	</form>
+   	  	 	  </ul>
+   	  	 	</div>
+   	  	 	<div class="zzgh_4">
+   	  	 	  <dl>
+   	  	 	  	<dd>
+   	  	 	  	  <strong>温馨提示:</strong>当您在网上预约成功后，医生会回电确认您的预约信息，并给您发送预约短信，
+   	  	 	  	  <font>凭此短信</font>
+   	  	 	  	  至我院导医台可享受无排队优先就诊。
+   	  	 	  	</dd>
+   	  	 	  	<dt>
+   	  	 	  	  <strong>医院地址:</strong>
+   	  	 	  	  全国26家分院，具体地址打电话咨询.
+   	  	 	  	</dt>
+   	  	 	  	<dt>
+   	  	 	  	  <strong>专家热线:</strong>
+   	  	 	  	  400-811-2202
+   	  	 	  	</dt>
+   	  	 	  </dl>
+   	  	 	</div>
+   	  	 </div>
+   	  	 <!-- <div class="fy">
+   	  	 	<ul>
+   	  	 	  <li>上一篇:<a href="">刘先生，腰椎间盘突出引发坐骨神经痛</a></li>
+   	  	 	  <li>下一篇:<a href="">刘先生，腰椎间盘突出引发坐骨神经痛</a></li>
+   	  	 	</ul>
+   	  	 </div> -->
+   	  </div>
+   	<!-- 右侧 -->
+   	  <include file="Public/right"/>
+   </div>
+  <!-- 内容结束 -->
+</div>
+<include file="Public/footer"/>
+</body>
+</html>

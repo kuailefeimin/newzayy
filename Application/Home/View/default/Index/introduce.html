@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<include file="Public/head"/>
+<style type="text/css">
+input[name=confirm]{
+    width: 25px;
+    height: 22px;
+    float: left;
+    margin-top: 7px;
+}
+input[name=sex]{
+    width: 25px;
+    height: 22px;
+    float: left;
+    margin-top: 11px;
+}
+.formspan{
+        width: 30px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 7px;
+}
+.formspan1{
+        width: 30px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 11px;
+}
+</style>
+</head>
+<body>
+<include file="Public/header"/>
+<!-- 内容 -->
+	<div class="newcontent">
+		<!-- 左侧导航 -->
+		<div class="left-nav">
+			<ul>
+				<li class="left-nav-xz"><a href="#introduce">医院简介</a></li>
+				<li><a href="#develop">发展历程</a></li>
+				<li><a href="{:U('Home/Index/details/id/299')}" target="_blank">分院地址</a></li>
+				<li><a href="#patent">国家专利</a></li>
+				<li><a href="#proteam">专家团队</a></li>
+				<li><a href="#honor">十大荣誉</a></li>
+				<li><a href="{:U('Home/Index/details',array('id'=>$online[0]['id']))}" target="_blank">网上挂号</a></li>
+				<li><a href="{:U('Home/Index/details',array('id'=>$policy[0]['id']))}" target="_blank">惠民政策</a></li>
+			</ul>
+		</div>
+		<!-- 左侧导航 -->
+		<!-- 中安介绍 -->
+		<a name="introduce"></a>
+		<div class="introduce">
+			<div class="intro-tit">中安介绍</div>
+			<div class="intro-content">
+				<div class="intro-cover">
+					<a href="{:U('Home/Index/details',array('id'=>$introduce[0]['id']))}"><img src="{$introduce.0.cover_id|get_cover='path'}" alt="中安医院" width="427" height="244">
+					</a>
+				</div>
+				<div class="intro-con">
+				<volist name="introduce" id="vo">
+					<h3><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,22,'utf8'}</a></h3>
+					<p>
+						{$vo.description}……<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细简介]</a>
+					</p>
+				</volist>
+				</div>
+			</div>
+		</div>
+		<!-- 中安介绍 -->
+		<!-- 发展历程 -->
+		<a name="develop"></a>
+		<div class="develop">
+			<div class="intro-tit">发展历程</div>
+			<div class="develop-con">
+				<img src="__IMG__/zayy/develop.png" alt="中安医院发展历程">
+			</div>
+		</div>
+		<!-- 发展历程 -->
+		<!-- 国家专利 -->
+		<a name="patent"></a>
+		<div class="patent">
+			<div class="intro-tit">国家专利</div>
+			<div class="patent-content">
+				<div class="patent-left">
+					<div class="patent-up">
+						<div class="cert-img">
+							<img src="__IMG__/zayy/cert1.jpg" width="350" height="206" alt="专利证书">
+							<div class="float-cover">国家专利证书
+							</div>
+						</div>
+					</div>
+					<div class="patent-down">
+						<div class="drug">
+							<img src="__IMG__/zayy/yao1.jpg" width="174" height="103" alt="多维骨康丸">
+							<div class="float-cover">多维骨康丸</div>
+						</div>
+						<div class="drug">
+							<img src="__IMG__/zayy/yao2.jpg" width="174" height="103" alt="多维骨康丸">
+							<div class="float-cover">多维骨康丸</div>
+						</div>
+					</div>
+				
+				</div>
+				<div class="patent-right">
+					<div class="drug-content">
+						<strong>多维通痹康胶囊</strong>
+						<p>结合现代医学理论研制而成，搜风通络、温经散寒、益气养血、化瘀止痛。对腰椎肩盘突出、风湿性关节炎、痛风等病症疗效明显，无任何毒副作用。</p>
+						<strong>多维骨康丸</strong>
+						<p>补肝肾、强筋骨、活血通络止痛。适用于颈、腰、腿酸软、疼痛、关节僵硬变形、屈伸不利、肢体麻木疲劳乏力、畏寒肢冷、胸闷憋气等中医辩证属肝肾阳虚型痹症。</p>
+					</div>
+					<div class="patent-btn">
+						<a href="{:U('Home/Index/details',array('id'=>$policy[0]['id']))}">
+							<img src="__IMG__/zayy/newpolicy.png" >
+						</a>
+						<a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979">
+							<img src="__IMG__/zayy/consult-free.png" >
+						</a>
+					</div>
+				</div>
+			
+		</div>
+		</div>
+		<!-- 国家专利 -->
+		<!-- 专家团队 -->
+		<a name="proteam"></a>
+		<div class="team">
+			<div class="intro-tit">专家团队
+            <a href="{:U('Home/Index/proteam/s/team')}" class="more" target="_blank">更多>></a></div>	
+			<div class="team-wrapper">
+				<p>中安医院以宿峰院长为核心组建了一支由教授、博士生导师、医学博士、硕士等30多位高级人才组成的全国“绿色多维疗法专家团”。各位专家在临床一线有独特建树，在各类专业期刊上发表学术论文多篇.....</p>
+				
+				<div class="team-con">
+				<volist name="proteam" id="vo" >
+				 <if condition="$i eq 2 or $i eq 4">
+					<div class="team-block blocklf">
+					<else />
+					<div class="team-block">
+				 </if>
+				 <?php $pro = explode(" ", $vo['title']);
+				 ?>
+						<div class="block-left">
+							<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">
+							  <img src="{$vo.cover_id|get_cover='path'}" width="158" height="207" alt="{$vo.title}">
+							</a>
+						</div>
+						<div class="block-right">
+							<h4>{$pro.0}&nbsp;<small>{$pro.1}</small></h4>
+						  <div class="pro-intro">
+								{$vo.description|mb_substr=0,78,'utf8'|nl2br}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a> 
+						  </div>
+						  <!-- <div class="float-btn">
+						  	<i class="book-i"></i>
+						  	<i class="consult-i"></i>
+						  </div> -->
+						  <div class="team-btn">
+						  	<a href="#booking" class="user">
+						  		<i class="fa fa-thumbs-up fa-2x"></i>
+						  	</a>
+						  	<a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="mess" target="_blank">
+						  		<i class="fa fa-weixin fa-2x"></i>
+						  	</a>
+						  </div>
+						</div>
+					</div>
+					</volist>
+				</div>
+			</div>
+		</div>
+		<!-- 专家团队 -->
+
+	</div>
+	<!-- 在线预约 -->
+   <a name="booking"></a>
+    <div class="container1 booking">
+      <form action="http://wap.zhonganyiyuan.com//index.php?s=/Home/Index/reg_system"  method="post" onsubmit="return check()">
+          <div class="wrap-book">
+           <div class="book1">
+              <div class="row1"><span class="rowname">姓名:</span><input type="text" id="name" name="name"></div>
+              <div class="row1"><span class="rowname">是否确诊:</span>
+                <span class="formspan"> 是  </span>
+                <input  type="radio" id="confirm" name="confirm"  value="是">
+                <span class="formspan">否 </span>
+                <input  type="radio" id="confirm" name="confirm" value="0" checked>
+              </div>
+           </div>
+            <div class="book1">
+              <div class="row1"><span class="rowname">年龄:</span><input type="text"  id="age" name="age"></div>
+              <div class="row1"><span class="rowname">联系电话:</span><input type="text" id="mobile" name="mobile"></div>
+           </div>
+            <div class="book1">
+              <div class="row1"><span class="rowname">您的性别:</span>
+                 <span class="formspan1"> 男  </span>
+                <input  type="radio" id="confirm" name="sex"  value="1">
+                <span class="formspan1">女 </span>
+                <input  type="radio" id="confirm" name="sex" value="2" checked>
+              </div>
+              <div class="row1"><span class="rowname">病情描述:</span><input type="text" id="details" name="details"></div>
+           </div>
+            <div class="book2">
+               <input type="submit" class="sub-btn" value="提交信息" style="width: 161px;">
+           </div>
+          </div>
+    </form>
+    </div>
+    <div style="height:34px"></div>
+    <!-- 在线预约 -->
+    <!-- 十大荣誉 -->
+    <a name="honor"></a>
+		<div class="honor">
+			<div class="intro-tit" style="width:940px">十大荣誉</div>
+			<div class="honor-img" id="demo">
+			  <div id="indemo">
+			  <div id="demo1">
+				<ul>
+				<volist name="honor" id="vo">
+					<li>
+						
+							<img src="{$vo.cover_id|get_cover='path'}" width="225" height="168" alt="{$vo.title}">
+							<!-- <div class="float-cover">{$vo.title|mb_substr=0,14,'utf8'}</div> -->
+						
+					</li>
+				</volist>
+				</ul>
+				</div>
+				<div id="demo2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 十大荣誉 -->
+<!-- 内容 -->
+<include file="Public/footer"/>
+<script type="text/javascript">
+	// $(function(){
+	// 	// 弹出小圆咨询
+	// 	$('.team-btn .user').hover(function(){
+	// 		$('.book-i').fadeIn();
+	// 		$('.book-i').fadeIn('slow');
+	// 		$('.book-i').fadeIn(3000);
+	// 	},function(){
+	// 		$('.book-i').fadeOut();
+	// 		$('.book-i').fadeOut('slow');
+	// 		$('.book-i').fadeOut(3000);
+	// 	});
+	// 	$('.team-btn .mess').hover(function(){
+	// 		$('.consult-i').fadeIn();
+	// 		$('.consult-i').fadeIn('slow');
+	// 		$('.consult-i').fadeIn(3000);
+	// 	},function(){
+	// 		$('.consult-i').fadeOut();
+	// 		$('.consult-i').fadeOut('slow');
+	// 		$('.consult-i').fadeOut(3000);
+	// 	});
+	// })
+// 挂号系统验证
+      function check(){
+         var rule = /^1[3|4|5|7|8]\d{9}$/;
+         if($('#name').val() == ''){
+            alert('患者姓名不能为空');
+            $('#name').focus();
+            return false;
+         }else if($('#age').val() ==''){
+            alert('患者年龄不能为空');
+            $('#age').focus();
+            return false;
+         }else if($('#mobile').val() ==''){
+            alert('联系电话不能为空');
+            $('#mobile').focus();
+            return false;
+         }else if(!rule.test($('#mobile').val())){
+            alert('请输入正确的联系方式');
+            $('#mobile').focus();
+            return false;
+         }else if($('#details').val() == ''){
+            alert('您哪里不舒服呢?');
+            $('#details').focus();
+            return false;
+         }
+      }
+</script>
+<script>
+    
+    var speed=30; //数字越大速度越慢
+    var tab=document.getElementById("demo");
+    var tab1=document.getElementById("demo1");
+    var tab2=document.getElementById("demo2");
+    tab2.innerHTML=tab1.innerHTML;
+    function Marquee(){
+    if(tab2.offsetWidth-tab.scrollLeft<=0)
+    tab.scrollLeft-=tab1.offsetWidth
+    else{
+    tab.scrollLeft++;
+    }
+    }
+    var MyMar=setInterval(Marquee,speed);
+    tab.onmouseover=function() {clearInterval(MyMar)};
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+    
+    </script>
+</body>
+</html>

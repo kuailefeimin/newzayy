@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<include file="Public/head"/>
+</head>
+<body>
+<include file="Public/header"/>
+<!-- 二级病种内容 -->
+	<div class="qin-container">
+		<!-- 认识病种 -->
+		<div class="know">
+			<div class="know-left">
+ 			   <video width="100%"  controls>
+         <source src="./reason.mp4" type="video/mp4">
+         </video>
+			</div>
+			<div class="know-right">
+				<div class="know-tit">
+				  <h3><a href="{:U('Home/Index/details',array('id'=>$know['id']))}">{$know.title}</a></h3>
+				  <span>
+					<font>　KNOW OF PROLAPSE OF LUMBAR INTERVERTEBRAL DISE　</font>
+				  </span>
+				</div>
+				<div class="know-news">
+					<div class="know-newsleft">
+						{$know.description}...<a href="{:U('Home/Index/details',array('id'=>$know['id']))}" class="details">详细</a>
+					</div>
+					<div class="know-newsright"><a href="{:U('Home/Index/details',array('id'=>$know['id']))}" ><img src="{$know.cover_id|get_cover='path'}" width="269" height="139" alt="{$know.title}"></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 二级病种内容 -->
+<!-- 早中晚期 -->
+    <div class="qin-container">
+       <div class="main01_1">
+          <div class="main01_l">
+             <ul>
+                <li  class="early" >早期</li>
+                <li  class="medium" >中期</li>
+                <li  class="later" >晚期</li>
+              </ul>
+          </div>
+          <div class="main01_r">
+            <!-- 早期 -->
+             <div id="early" class="index_qwjs" >
+                <ul>
+                  <volist name="early" id="vo">
+                    <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}"><img src="{$vo.cover_id|get_cover='path'}" width="200" height="181"><p>{$vo.title|mb_substr=0,12,'utf8'}</p></a></li>
+                  </volist> 
+                </ul>
+                <dl>
+                  <dd>关节病早期诊断及治疗非常重要，而且必须在专业医师的指导下治疗规范治疗和用药，否则延误病情还劳民伤财。
+</dd>
+                  <dt>
+                  <strong>早期治疗:</strong>
+                  治疗时间短 花费少 容易康复
+                  </dt>
+                </dl>
+             </div>
+             <!-- 早期 -->
+             <!-- 中期 -->
+             <div id="medium" class="index_qwjs" >
+                <ul>
+                  <volist name="medium" id="vo">
+                    <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}"><img src="{$vo.cover_id|get_cover='path'}" width="200" height="181"><p>{$vo.title|mb_substr=0,12,'utf8'}</p></a></li>
+                  </volist> 
+                </ul>
+                <dl>
+                  <dd>中度的骨关节疾病，通常还达不到手术的标准。80%的中期骨关节病患者来到中安通过我院独特中医疗法，可以很好的控制病情发展</dd>
+                  <dt>
+                  <strong>中期治疗：</strong>
+                  治疗时间较长 花费多 较易治愈，易复发
+                  </dt>
+                </dl>
+             </div>
+             <!-- 早期 -->
+              <!-- 晚期 -->
+             <div id="later" class="index_qwjs" >
+                <ul>
+                  <volist name="later" id="vo">
+                    <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}"><img src="{$vo.cover_id|get_cover='path'}" width="200" height="181"><p>{$vo.title|mb_substr=0,12,'utf8'}</p></a></li>
+                  </volist> 
+                </ul>
+                <dl>
+                  <dd>骨关节疾病发展到晚期一般患者的关节的情况就非常严重了。这样的情况下，还是应该采用药物和物理治疗一起使用的综合方法进行治疗。提醒患者切勿将病情拖延到晚期才采取正规手段治疗</dd>
+                  <dt>
+                  <strong>晚期危害：</strong>
+                  治疗时间更长 花费昂贵 不易治愈
+                  </dt>
+                </dl>
+             </div>
+             <!-- 晚期 -->
+          </div>
+       </div>
+    </div>
+  <!-- 加医生微信 -->
+    <div class="container1 weixin">
+       <div class="wei-tit"> 加医生微信 可随时咨询骨病问题</div>
+       <div class="scode"><img src="__IMG__/zayy/scode.jpg"></div>
+       <div class="bcode"><img src="__IMG__/zayy/bcode.jpg"></div> 
+    </div>
+  <!-- 检查项目 -->
+    <div class="container-q project">
+       <div class="project-content">
+          <div class="project-left">
+            <img src="__IMG__/zayy/project.jpg">
+          </div>
+          <div class="project-right">
+            <form name="myform" id="myform"  action="http://wap.zhonganyiyuan.com/index.php?s=/Home/Index/selftest"  method="post" onsubmit="return check1()"> 
+       <div class="test">
+          <h1>骨关节病<span style="color:#f48615">自测</span></h1>
+          <div class="line1"></div>
+          <div class="ask"><span>1</span>您是否有以下症状?(可多选)</div>
+          <div class="check m" >
+          <input type="checkbox" name="symptom[]" value="1"/>晨僵
+          <input type="checkbox" name="symptom[]" value="2"/>关节反复疼痛
+          <input type="checkbox" name="symptom[]" value="3"/>关节肿痛
+          <input type="checkbox" name="symptom[]" value="4"/>关节活动受限
+          <input type="checkbox" name="symptom[]" value="5"/>游走性痛
+          </div>
+          <div class="line"></div>
+          <div class="ask"><span>2</span>发病有多久了</div>
+          <div class="check m" >
+          <input type="radio" name="howlong" value="1"/>最近
+          <input type="radio" name="howlong" value="2"/>两个月以上
+          <input type="radio" name="howlong" value="3"/>半年没有做检查
+          <input type="radio" name="howlong" value="4"/>两年以上
+         
+          </div>
+          <div class="line"></div>
+          <div class="ask"><span>3</span>是否有治疗过？</div>
+          <div class="check m" >
+          <input type="radio" name="treat" value="1"/>是
+          <input type="radio" name="treat" value="0"/>否
+          </div>
+          <div class="line"></div>
+          
+       </div>
+
+  <div class="gh">
+    <ul>
+      <li><span><b>*</b> 姓名：</span>
+      <input type="text"  class="upfile"  id="name1" name="name" value="">
+      </li>
+      
+      <li><span><b>*</b> 电话：</span>
+        <input type="text"  class="upfile"  id="mobile1" name="mobile" value=""> 
+      <div class="tipinfo"></div>
+    
+    </li>
+    
+    </ul>
+    <div class="clear"></div>
+    <div class="zxzc">
+      <input name="submit" type="submit" value="提交信息" />
+      <a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979"   rel="nofollow">咨询专家</a> </div>
+    
+  </form>
+  </div>
+  <script type="text/javascript">
+      // 骨关节病自测验证
+      function check1(){
+         var rule = /^1[3|4|5|7|8]\d{9}$/;
+         if($('#name1').val() == ''){
+            alert('姓名不能为空');
+            $('#name1').focus();
+            return false;
+         }else if($('#mobile1').val() ==''){
+            alert('电话不能为空');
+            $('#mobile1').focus();
+            return false;
+         }else if(!rule.test($('#mobile1').val())){
+            alert('请输入正确的联系方式');
+            $('#mobile1').focus();
+            return false;
+         }else{
+            return true;
+         }
+      }
+  </script>
+          </div>
+       </div>
+       <!-- 检查项目 -->
+
+    </div>
+    <!-- 只需三步 -->
+     <div class="container-q three">
+       <div class="three-head">只需三步 彻底告别{$know.title|mb_substr=2,10,'utf8'}</div>
+       <div class="three-content">
+         <div class="three-left">
+           <div class="three-bar">
+              <span class="painful">消肿止痛</span>
+              <span class="care">调理体质</span>
+              <span class="repeat">防止反复</span>
+              <span class="cost">费用</span>
+           </div>
+           <!-- 消肿止痛 -->
+           <div class="bar-content" id="painful">
+             <div class="bar-img">
+              <img src="__IMG__/zayy/san2.jpg" width="244" height="216">
+             </div>
+             <div class="bar-news">
+               <dl>
+                 <volist name="painful" id="vo" offset="0" length="2">
+                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
+                  </dd>
+                 </volist>  
+                </dd>
+               </dl>
+               <div class="bar-two">
+                <volist name="painful" id="vo" offset="2" length="2">
+                 <p><i></i><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,25,'utf8'}</a></p>
+                </volist>  
+               </div>
+             </div>
+           </div>
+           <!-- 消肿止痛 -->
+           <!-- 调理体质 -->
+           <div class="bar-content" id="care">
+             <div class="bar-img">
+              <img src="__IMG__/zayy/san2.jpg" width="244" height="216">
+             </div>
+             <div class="bar-news">
+               <dl>
+                 <volist name="care" id="vo" offset="0" length="2">
+                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
+                  </dd>
+                 </volist>  
+                </dd>
+               </dl>
+               <div class="bar-two">
+                <volist name="care" id="vo" offset="2" length="2">
+                 <p><i></i><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,25,'utf8'}</a></p>
+                </volist>  
+               </div>
+             </div>
+           </div>
+           <!-- 调理体质 -->
+           <!-- 防止反复 -->
+           <div class="bar-content" id="repeat">
+             <div class="bar-img">
+              <img src="__IMG__/zayy/san2.jpg" width="244" height="216">
+             </div>
+             <div class="bar-news">
+               <dl>
+                 <volist name="repeat" id="vo" offset="0" length="2">
+                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
+                  </dd>
+                 </volist>  
+                </dd>
+               </dl>
+               <div class="bar-two">
+                <volist name="repeat" id="vo" offset="2" length="2">
+                 <p><i></i><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,25,'utf8'}</a></p>
+                </volist>  
+               </div>
+             </div>
+           </div>
+           <!-- 防止反复 -->
+            <!-- 费用 -->
+           <div class="bar-content" id="cost">
+             <div class="bar-img">
+              <img src="__IMG__/zayy/san2.jpg" width="244" height="216">
+             </div>
+             <div class="bar-news">
+               <dl>
+                 <volist name="cost" id="vo" offset="0" length="2">
+                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
+                  </dd>
+                 </volist>  
+                </dd>
+               </dl>
+               <div class="bar-two">
+                <volist name="cost" id="vo" offset="2" length="2">
+                 <p><i></i><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,25,'utf8'}</a></p>
+                </volist>  
+               </div>
+             </div>
+           </div>
+           <!-- 费用 -->
+         </div>
+         <div class="three-right">
+            <div class="gua-tit">网络挂号<span class="color">免</span>排队 优<span class="color">先</span>就诊</div>
+            <form action="http://wap.zhonganyiyuan.com//index.php?s=/Home/Index/reg_system"  method="post" onsubmit="return check()" class="gform">
+               <div class="form-row">真实姓名:&nbsp;<input type="text" id="name" name="name"></div>
+               <div class="form-row1">性别:<input type="radio" name="sex"  value="1" checked>男&nbsp;&nbsp;<input type="radio" name="sex"  value="2">女</div>
+               <div class="form-row">联系电话:&nbsp;<input type="text" id="mobile" name="mobile"></div>
+               <div class="form-row">病情描述:&nbsp;<textarea id="details" name="details"></textarea></div>
+               <div class="form-row2"><input type="submit" value="提交预约信息" class="sub"></div>
+            </form>
+         </div>
+       </div>
+     </div>
+     <!-- 只需三步 -->
+     <!-- 案例分享 -->
+      <div class="qin-container case-share">
+          <div class="case-header">
+            康复案例<span class="ccolor">没有到中安来，不要轻易放弃治疗</span>
+            <a href="{:U('Home/Index/lists',array('cid'=>$case[0]['category_id']))}" class="more">更多>></a>
+          </div>
+          <div class="case-content1">
+             <div class="share-left">
+              <volist name="case" id="vo" mod="4">
+             
+                <if condition="$i gt 2">
+                  <div class="share1">
+                  
+                   <div class="share-text">
+                      <div class="share-tit"><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,18,'utf8'}</a></div>
+                      <p>{$vo.description|mb_substr=0,46,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details" target="_blank">[详细]</a></p>
+                   </div>
+                    <div class="share-img">
+                    <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="198" height="200"></a>
+                   </div>
+                </div>
+                <else />
+                   <div class="share1">
+                   <div class="share-img">
+                    <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="198" height="200" ></a>
+                   </div>
+                   <div class="share-text">
+                      <div class="share-tit"><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,18,'utf8'}</a></div>
+                      <p>{$vo.description|mb_substr=0,46,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details" target="_blank">[详细]</a></p>
+                   </div>
+                </div>
+                </if>
+              </volist>
+             </div>
+             <div class="share-right">
+               <img src="__IMG__/zayy/case-bg.jpg" >
+             </div>
+          </div>
+      </div>
+     <!-- 案例分享 -->
+     <!-- 感谢信 -->
+       <div class="container-q">
+         <div class="main05">
+            <div class="title_gx">
+              <img src="__IMG__/zayy/main10_title.jpg">
+            </div>
+            <ul>
+              <volist name="thanks" id="vo">
+              
+              <if condition="$key eq 4">
+              <li style="margin-right:0"><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="130" height="145"></a></li>
+              <else />
+              <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="130" height="145"></a></li>
+              </if>
+              </volist>
+            </ul>
+            <div class="title_gx">
+              <img src="__IMG__/zayy/main11_title.jpg">
+            </div>
+            <ul>
+              <volist name="story" id="vo">
+              
+              <if condition="$key eq 4">
+              <li style="margin-right:0"><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="130" height="145"></a></li>
+              <else/>
+              <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.cover_id|get_cover='path'}" width="130" height="145"></a></li>
+              </if>
+              </volist>
+            </ul>
+         </div>
+         <div class="thanks-right">
+            <div class="thanks-head">热点导读</div>
+            <ul>
+              <volist name="hot" id="vo">
+              <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">>{$vo.title|mb_substr=0,16,'utf8'}</a></li>
+              </volist>
+            </ul>
+            <b>
+              <a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979"><img src="__IMG__/zayy/main05_an01.jpg"></a>
+            </b>
+         </div>
+       </div>
+     <!-- 感谢信 -->
+     <!-- 线条 -->
+     <div class="container1">
+       <div class="xt">
+         <div class="xt01"></div>
+       </div>
+     </div>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript">
+  $(function(){
+    //早中晚期
+    $('.main01_l li').hover(function(){
+       var mycate = $(this).attr('class');
+       $('.main01_r div').css('display','none');
+       $('#'+mycate).css('display','block');
+       $('.main01_l li').removeClass('color-xz');
+       $(this).css('color','#f9911d');
+    });
+    //二维码
+    $('.scode').hover(function(){
+      $('.bcode').fadeIn();
+      $(".bcode").fadeIn("slow");
+      $(".bcode").fadeIn(3000);
+    },function(){
+        $(".bcode").fadeOut();
+        $(".bcode").fadeOut("slow");
+        $(".bcode").fadeOut(3000);
+    });
+    //只需三步
+    $('.three-bar span').hover(function(){
+        var mycate = $(this).attr('class');
+        $('.bar-content').css('display','none');
+
+        $('#'+mycate).css('display','block');
+        $('.three-bar span').css('background','#fff');
+        $('.three-bar span').css('color','#0099a5');
+        $(this).css('background','#0099a5');
+        $(this).css('color','#fff');
+    },function(){
+        // $(this).addClass('color-three');
+        // $('#'+mycate).css('display','block');
+    });
+  })
+</script>
+<!--挂号系统-->
+  <script type="text/javascript">
+      // 挂号系统验证
+      function check(){
+         var rule = /^1[3|4|5|7|8]\d{9}$/;
+         if($('#name').val() == ''){
+            alert('患者姓名不能为空');
+            $('#name').focus();
+            return false;
+         }else if($('#age').val() ==''){
+            alert('患者年龄不能为空');
+            $('#age').focus();
+            return false;
+         }else if($('#mobile').val() ==''){
+            alert('联系电话不能为空');
+            $('#mobile').focus();
+            return false;
+         }else if(!rule.test($('#mobile').val())){
+            alert('请输入正确的联系方式');
+            $('#mobile').focus();
+            return false;
+         }else if($('#details').val() == ''){
+            alert('您哪里不舒服呢?');
+            $('#details').focus();
+            return false;
+         }
+      }
+  </script>
+</body>
+</html>

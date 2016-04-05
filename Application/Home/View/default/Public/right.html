@@ -1,0 +1,71 @@
+  <?php
+     //挂号大厅
+     //$hall = D('Document')->lists(42);
+     $time = time();
+  ?>
+  <div class="article_right">
+         <!-- 挂号大厅 -->
+         <div class="hall">
+            <div class="hall-tit">
+              <img src="__IMG__/zayy/hall.jpg">
+            </div>
+           <div class="myscroll" style="width:339px;margin:0;">
+           <ul>
+            
+              <li>{$time|date='Y-m-d',###} 包鑫婷：136****7102 风湿 呼和√</li>
+              <li>{$time|date='Y-m-d',###} 田真真：151****8230 风湿 呼和√</li>
+              <li>{$time|date='Y-m-d',###} 胡永明：150****1266 风湿 通辽√</li>
+              <li>{$time|date='Y-m-d',###} 张国庆：139****3109 风湿 呼和√</li>
+              <li>{$time|date='Y-m-d',###} 王宇:159****5896 风湿 包头√</li>
+              <li>{$time|date='Y-m-d',###} 刘泽浩：158****5603 风湿 廊坊 √</li>
+              <li>{$time|date='Y-m-d',###} 郭明义：137****1425 风湿 包头√</li>
+              <li>{$time|date='Y-m-d',###} 李少静：159****0816 风湿 张家口</li>
+              <li>{$time|date='Y-m-d',###}  张成光：155****2642 风湿 临沂√</li>
+            
+           </ul>
+       </div>
+         </div>
+         <!-- 就医指南 -->
+         <div class="guid">
+            <div class="hall-tit">
+              <img src="__IMG__/zayy/guid.jpg">
+            </div>
+            <ul>
+              <li class="guid-1"><i></i><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979">在线咨询</a></li>
+              <li class="guid-2"><i></i><a href="#booking">免费预约</a></li>
+              <li class="guid-3" style="padding-left:7px;width:115px;"><a href="tencent://message/?uin=1372794483&Site=点我咨询&Menu=yes"><img  style="CURSOR: pointer"   border="0" SRC="__IMG__/zayy/qq.png" alt="有问题点我咨询"></a></li>
+              <li class="guid-4"><i></i><a href="{:U('Home/Index/details',array('id'=>85))}">初诊须知</a></li>
+              <li class="guid-5"><i></i><a href="{:U('Home/Index/details/id/299')}">来院路线</a></li>
+              <li class="guid-6"><i></i><a href="{:U('Home/Index/details',array('id'=>88))}">流程导向</a></li>
+              <div class="call"><a href=""><img src="__IMG__/zayy/call.png"></a></div>
+            </ul> 
+         </div>
+         <!-- 视频集锦 -->
+         <div class="video-sum">
+           <div class="hall-tit">
+              <img src="__IMG__/zayy/video.jpg">
+            </div>
+           <ul>
+             <li>
+             <iframe height=305 width=305 src="http://player.youku.com/embed/XMTQ3NTk4ODI2NA==" frameborder=0 allowfullscreen></iframe>
+           
+             </li>
+             <li>
+              <iframe height=305 width=305 src="http://player.youku.com/embed/XMTQ3NjEzOTY0MA==" frameborder=0 allowfullscreen></iframe>
+             </li>
+             <li>
+               <iframe class="video_iframe" style="z-index:1;" src="http://v.qq.com/iframe/player.html?vid=o0184dd6v7f&amp;width=305&amp;height=305&amp;auto=0" allowfullscreen="" frameborder="0" height="305" width="305"> &amp;nbsp;</iframe>
+             </li>
+           </ul>
+         </div>
+      </div>
+<script type="text/javascript">
+$(function(){
+  //无缝滚动
+      $('.myscroll').myScroll({
+      speed: 40, //数值越大，速度越慢
+      rowHeight: 30 //li的高度
+      });
+
+})
+</script>

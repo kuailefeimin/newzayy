@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<include file="Public/head"/>
+</head>
+<body>
+<include file="Public/header"/>
+  <!-- 二级栏目结束 -->
+  <!-- 内容开始 -->
+   <div class="article_main">
+   	<!-- 左侧 -->
+   	  <div class="wz_main">
+   	  	 <div class="wz_main1">
+          <b>{$data.0.category_id|get_cate_one}</b>
+          <p>
+           <a href="{:U('Home/Index/index')}">主页</a>>
+           
+           <a href="#">{$data.0.category_id|get_cate_two}</a>
+          </p>
+         </div>
+   	  	
+   	  	 <div id="content">
+   	  	 <volist name="data" id="vo">
+   	  	 	<dl class="proteam">
+   	  	 		<dt>
+   	  	 			<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">
+								<img src="{$vo.cover_id|get_cover='path'}" width="112" height="136" alt="{$vo.title}">
+   	  	 			</a>
+   	  	 		</dt>
+   	  	 		<dd>
+   	  	 			<strong><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title}</a></strong>
+   	  	 			<p>{$vo.description}<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【阅读全文】</a>
+     					</p>
+   	  	 			<div class="team-btn ex1">
+						  	<a href="#booking" class="user">
+						  		<i class="fa fa-thumbs-up fa-2x"></i>
+						  	</a>
+						  	<a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="mess" target="_blank">
+						  		<i class="fa fa-weixin fa-2x"></i>
+						  	</a>
+						  </div>
+   	  	 		</dd>
+   	  	 	</dl>
+					</volist>
+          <div class="page">
+          {$_page}
+          </div>
+   	  	 	<!-- <div class="page">1 2 3 </div> -->
+   	  	 </div>
+   	  	 <a name="booking"></a>
+   	  	 <div class="zzgh_1">
+   	  	 	<div class="zzgh_2">
+   	  	 	   <dl>
+   	  	 	     <dd><img src="__IMG__/zayy/article_gh01.jpg"></dd>
+   	  	 	     <dt>
+   	  	 	     	<p>如果您不确定自己的症状应该如何挂号,欢迎您点击</p>
+   	  	 	     	<span><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979"><img src="__IMG__/zayy/article_gh02.jpg"></a></span>
+   	  	 	     </dt>
+
+   	  	 	   </dl>
+   	  	 	</div>
+   	  	 	<div class="zzgh_3">
+   	  	 	   <ul>
+               <form action="http://wap.zhonganyiyuan.com//index.php?s=/Home/Index/reg_system"  method="post" name="form1">
+                 <li><span><b>*</b>就诊姓名:</span>
+                    <input type="text" class="zzgh_1_1" id="name" name="name">
+                 </li>
+                 <li>
+                  <span><b>*</b>性别</span>
+                  <input type="radio" class="dxan" name="sex"  value="1" checked>女
+                  <input type="radio" class="dxan" name="sex"  value="2">男
+                 </li>
+                 <li><span><b>*</b>联系电话:</span>
+                    <input type="text" class="zzgh_1_1" id="mobile" name="mobile">
+                 </li>
+                 <li><span><b>*</b>病情描述:</span>
+                    <textarea class="zzgh_1_2" id="details" name="details"></textarea>
+                 </li>
+                 <li><input type="button" class="zzgh_1_3" onclick="check()"></li>
+               </form>
+              </ul>
+   	  	 	</div>
+   	  	 	<div class="zzgh_4">
+   	  	 	  <dl>
+   	  	 	  	<dd>
+   	  	 	  	  <strong>温馨提示:</strong>当您在网上预约成功后，医生会回电确认您的预约信息，并给您发送预约短信，
+   	  	 	  	  <font>凭此短信</font>
+   	  	 	  	  至我院导医台可享受无排队优先就诊。
+   	  	 	  	</dd>
+   	  	 	  	<dt>
+   	  	 	  	  <strong>医院地址:</strong>
+   	  	 	  	  全国26家分院，具体地址打电话咨询.
+   	  	 	  	</dt>
+   	  	 	  	<dt>
+   	  	 	  	  <strong>专家热线:</strong>
+   	  	 	  	  400-811-2202
+   	  	 	  	</dt>
+   	  	 	  </dl>
+   	  	 	</div>
+   	  	 </div>
+   	  	 <!-- <div class="fy">
+   	  	 	<ul>
+   	  	 	  <li>上一篇:<a href="">刘先生，腰椎间盘突出引发坐骨神经痛</a></li>
+   	  	 	  <li>下一篇:<a href="">刘先生，腰椎间盘突出引发坐骨神经痛</a></li>
+   	  	 	</ul>
+   	  	 </div> -->
+   	  </div>
+   	<!-- 右侧 -->
+   	  <include file="Public/right"/>
+   </div>
+  <!-- 内容结束 -->
+</div>
+<include file="Public/footer"/>
+<!--挂号系统-->
+  <script type="text/javascript">
+      // 挂号系统验证
+      function check(){
+         var rule = /^1[3|4|5|7|8]\d{9}$/;
+         if($('#name').val() == ''){
+            alert('患者姓名不能为空');
+            $('#name').focus();
+            return false;
+         }else if($('#age').val() ==''){
+            alert('患者年龄不能为空');
+            $('#age').focus();
+            return false;
+         }else if($('#mobile').val() ==''){
+            alert('联系电话不能为空');
+            $('#mobile').focus();
+            return false;
+         }else if(!rule.test($('#mobile').val())){
+            alert('请输入正确的联系方式');
+            $('#mobile').focus();
+            return false;
+         }else if($('#details').val() == ''){
+            alert('您哪里不舒服呢?');
+            $('#details').focus();
+            return false;
+         }else{
+            form1.submit();
+         }
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<?php
+   //首页banner图
+   $banner =  D('Document')->lists(138,'`level` desc');
+   //对症问诊
+   $symptom = D('Document')->lists(39,'`level` desc');
+   $s = $_GET['s'];
+?>
+<style type="text/css">
+  img:hover{border:0;}
+</style>
+<div class="header">
+  <div class="container ">
+    <div class="row">
+      <div class="span8 hl"><a href="{:U('Home/Index/index')}"><img src="__IMG__/zayy/logo.png"></a></div>
+      <div class="span4">
+      <!-- <img src="__IMG__/zayy/tel.png"> -->
+      <div class="logo-intro">
+      全国连锁&nbsp;&nbsp;惠泽天下
+      </div>
+      <strong class="tel">400-811-2202</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="nav" role="navigation" >
+      <ul class="nav nav-pills">
+        <li role="presentation" <if condition="$s eq ''">class="active"</if>>
+        <a href="{:U('Home/Index/index')}">网站首页</a></li>
+        <li  role="presentation" <if condition="$s eq 'hos'">class="active"</if>><a href="{:U('Home/Index/introduce/s/hos')}">医院简介</a></li>
+        <li  role="presentation" <if condition="$s eq 'team'">class="active"</if>><a href="{:U('Home/Index/proteam/s/team')}">专家团队</a></li>
+        <li role="presentation" <if condition="$s eq 'treat'">class="active"</if>><a href="{:U('Home/Index/treat/s/treat')}">特色疗法</a></li>
+        <li role="presentation"><a href="http://p.70c.com/w/CJYFCSS-SFACZW" target="_blank">招商加盟</a></li>
+        <li role="presentation" <if condition="$s eq 'contact'">class="active"</if>><a href="{:U('Home/Index/details/id/299/s/contact')}" target="_blank">联系我们</a></li>
+        <li role="presentation"><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" target="_blank">健康问诊</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="qin-content">
+    <div class="banner">
+          <div id="myCarousel" class="carousel slide">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <volist name="banner" id="vo">
+        <if condition="$key eq 0">
+        <div class="active item">
+        <a href="{$vo.title}" target="_blank">
+        <img src="{$vo.cover_id|get_cover='path'}" style="width:100%" >
+        </a>
+        </div>
+        <else/>
+         <div class="item">
+         <img src="{$vo.cover_id|get_cover='path'}" style="width:100%" >
+         </div>
+        </if>
+        </volist>
+       
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+      
+    </div>
+  </div>
+  <div class="qin-container1">
+  <!--二级栏目-->
+  <div class="container">
+    <div class="row mt">
+     <!--  <div class="span3"><a href="{:U('Home/Index/topic',array('cate_name'=>'fs'))}" target="_blank"><img src="__IMG__/zayy/fs.jpg"></a></div> -->
+     <div class="span3">
+      <a href="{:U('Home/Index/topic',array('cate_name'=>'fs'))}" target="_blank">
+       <i class="colum-f fs" ></i>
+       <div class="colum-r">
+         <div class="colum-text">风湿</div>
+         <div class="colum-en">rheumatism</div>
+       </div>
+       </a>
+     </div>
+      <div class="span3"><a href="{:U('Home/Index/topic',array('cate_name'=>'lfs'))}" target="_blank">
+       <i class="colum-f lfs" ></i>
+       <div class="colum-r">
+         <div class="colum-text">类风湿</div>
+         <div class="colum-en">Rheumatoid</div>
+       </div>
+      </a>
+      </div>
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'gx'))}" target="_blank">
+          <i class="colum-f gx" ></i>
+          <div class="colum-r">
+            <div class="colum-text">骨性关节炎</div>
+             <div class="colum-en">Osteoarthritis</div>
+          </div>
+        </a>
+        </div>
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'gz'))}" target="_blank">
+          <i class="colum-f gz" ></i>
+          <div class="colum-r">
+            <div class="colum-text">骨质增生</div>
+             <div class="colum-en">hyperosteogeny</div>
+          </div>
+        </a>
+        </div>
+    </div>
+    <div class="row mt">
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'zjp'))}" target="_blank">
+          <i class="colum-f zjp" ></i>
+          <div class="colum-r">
+            <div class="colum-text">椎间盘突出</div>
+             <div class="colum-en">herniated disk</div>
+          </div>
+        </a>
+      </div>
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'qzx'))}" target="_blank">
+          <i class="colum-f qzx" ></i>
+          <div class="colum-r">
+            <div class="colum-text">强直性脊柱炎</div>
+            <div class="colum-en">Ankylosing spondylitis</div>
+          </div>
+        </a></div>
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'chf'))}" target="_blank">
+          <i class="colum-f chf" ></i>
+          <div class="colum-r">
+            <div class="colum-text">产后风湿</div>
+            <div class="colum-en">Postpartum</div>
+          </div>
+        </a>
+        </div>
+      <div class="span3">
+        <a href="{:U('Home/Index/topic',array('cate_name'=>'jzb'))}" target="_blank">
+          <i class="colum-f jzb" ></i>
+          <div class="colum-r">
+            <div class="colum-text">颈椎病</div>
+            <div class="colum-en">cervical spondylopathy</div>
+          </div>
+        </a>
+        </div>
+    </div>
+  </div>
+  <!--问诊治疗-->
+  <div class="container1">
+  <div class="dzwz">
+    <dl>
+      <dd><img data-url="__IMG__/zayy/dzwz_tp01.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif"></dd>
+      <dt>
+        <p>
+          <volist name="symptom" id="vo" mod="8">
+            <a href="javascript:void(0)" target="_blank">
+            {$vo.title}
+            </a>
+           </volist>
+      </p>
+      </dt>
+    </dl>
+    <div class="search">
+      <form action="{:U('Home/Index/search')}" method="post" onsubmit="return keywordf()" id="keyword">
+       <input type="search" name="keyword" class="keyword" placeholder="请输入您的问题点击搜索">
+       <input type="submit" class="searchtext" value="搜索">
+      </form>
+    </div>
+  </div>
+ </div>
+ <script type="text/javascript">
+   function keywordf(){
+     if($('.keyword').val() == ''){
+        alert('查询关键词不能为空');
+        $('.keyword').focus();
+        return false;
+     }else{
+        return true;
+     }
+   }
+
+  
+  
+</script>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>风湿病的治疗|风湿病的症状|全国最好的风湿病医院|专业治疗类风湿性关节炎|中安医院- 最大的风湿骨病专科医院</title>
+<meta name="keywords" content="类风湿,类风湿性关节炎,类风湿吃什么药比较好,治疗类风湿,类风湿偏方,类风湿医院,中安医院,绿色多维疗法,关节炎的治疗方法,类风湿的治疗" />
+<meta name="description" content="中安类风湿骨关节病专科医院，打造全球类风湿性关节炎骨病领域的顶级品牌！中安医院遍布全国大中城市，是一所专业治疗风湿、类风湿、关节炎、痛风、骨质疏松、骨质增生、骨性关节炎、肩周炎、颈椎病、股骨头坏死、风湿寒性关节痛、腰肌劳损、坐骨神经痛、强直性脊柱炎、腰间盘突出、网球肘、肌肉萎缩、足跟痛等疾病的专科集团医院，医院致力于风湿骨病的临床研究，在类风湿骨病领域享有盛誉。中安医院全国免费电话：400-811-2202." />
+
+<include file="Public/head"/>
+<style type="text/css">
+input[name=confirm]{
+    width: 25px;
+    height: 22px;
+    float: left;
+    margin-top: 7px;
+}
+input[name=sex]{
+    width: 25px;
+    height: 22px;
+    float: left;
+    margin-top: 11px;
+}
+.formspan{
+        width: 30px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 7px;
+}
+.formspan1{
+        width: 30px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 11px;
+}
+</style>
+<?php $time = time();?>
+</head>
+<body>
+<include file="Public/header"/>
+ <!-- 新闻 -->
+ <div class="container-q index-wb">
+    <div class="news-left">
+    <video width="100%"  controls>
+      <source src="./lecture.mp4" type="video/mp4">
+    </video>
+    <div class="video-tit">类风湿专题讲座</div>
+    </div>
+    <div class="news-center">
+       <div class="news-tit">
+          <div class="tit-left"></div>
+          <div class="tit-right"></div>
+       </div>
+       <!-- 院内新闻 -->
+       <div class="news-content hnews">
+          <div class="news-up">
+              <h4>{$news.0.title|mb_substr=0,18,'utf8'}</h4>
+              <p>{$news.0.description|mb_substr=0,38,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$news[0]['id']))}" class="details" target="_blank">【详细】</a></p>
+          </div>
+          <div class="news-down">
+             <ul>
+              <volist name="news" id="vo" offset="1">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,21,'utf8'} <span class="time">{$vo.create_time|date='m-d',###}</span></a></li>
+              </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 院内新闻 -->
+       <!-- 优惠政策 -->
+        <div class="news-content policy">
+          <div class="news-up">
+              <h4>{$policy.0.title|mb_substr=0,18,'utf8'}</h4>
+              <p>{$policy.0.description|mb_substr=0,38,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$policy[0]['id']))}" class="details" target="_blank">【详细】</a></p>
+          </div>
+          <div class="news-down">
+             <ul>
+              <volist name="policy" id="vo" offset="1">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}">{$vo.title|mb_substr=0,21,'utf8'} <span class="time">{$vo.create_time|date='m-d',###}</span></a></li>
+              </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 优惠政策 -->
+    </div>
+    <div class="news-right">
+      <div class="right-tit"></div>
+      <div class="right-content" >
+        <div class="myscroll">
+         <ul>
+          
+            <li>{$time|date='Y-m-d',###} 包鑫婷：136****7102 挂号成功</li>
+              <li>{$time|date='Y-m-d',###} 田真真：151****8230 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 胡永明：150****1266 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 张国庆：139****3109 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 王宇:159****5896 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 刘泽浩：158****5603 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 郭明义：137****1425 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###} 李少静：159****0816 挂号成功 </li>
+              <li>{$time|date='Y-m-d',###}  张成光：155****2642 挂号成功 </li>
+          
+         </ul>
+       </div>
+         <h4>风湿骨病免费咨询服务</h4>
+         <p><span class="guas">挂号热线:</span><span class="guab">400-8112202</span></p>
+         <div class="guaa"><a href="#booking" class="bfocus">骨科在线挂号平台</a></div>
+      </div>
+    </div>
+ </div>
+ <!-- 主治疾病 -->
+ <div class="container-q diseases">
+    <div class="disease-head">
+        <h2>主治疾病</h2>
+        <p>拯救风湿骨病患者 助享健康幸福家庭</p>
+    </div>
+    <div class="index-row"></div>
+    <div class="disease-circle">
+      <div class="circle-wrap">
+        <div class="disease-cate" cate="fs">风湿</div>
+        <div class="disease-cate" cate="lfs">类风湿</div>
+        <div class="disease-cate" cate="chf">产后风湿</div>
+        <div class="disease-cate zjpt cate-xz" cate="zjp">椎间盘突出</div>
+        <div class="disease-cate" cate="qzx">强直性脊柱炎</div>
+        <div class="disease-cate" cate="gjy">骨性关节炎</div>
+      </div>
+    </div>
+    <div class="disease-content">
+       <div class="disease-left">
+          <h2>风湿骨病病因 症状</h2>
+          <div class="disease-video">
+    <video width="100%"  controls>
+      <source src="./reason.mp4" type="video/mp4">
+    </video>
+          </div>
+       </div>
+       <!-- 椎间盘 -->
+       <div class="disease-right zjp">
+          <div class="disease-rightup">
+            <volist name="zjp" id="vo" offset='0' length="1">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">
+                <img data-url="{$vo.cover_id|get_cover='path'}"  class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165">
+               </a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="zjp" id="vo" offset="1" length="4">
+                
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+               
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 椎间盘 -->
+        <!-- 风湿 -->
+       <div class="disease-right fs">
+          <div class="disease-rightup">
+            <volist name="fs" id="vo" >
+             <if condition="$vo['cover_id'] neq '0'">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">
+               <img data-url="{$vo.cover_id|get_cover='path'}" class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165"></a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+            </if>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="fs" id="vo">
+                 <if condition="$vo['cover_id'] eq '0'">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+                 </if>
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 风湿 -->
+        <!-- 类风湿 -->
+       <div class="disease-right lfs">
+          <div class="disease-rightup">
+            <volist name="lfs" id="vo" >
+             <if condition="$vo['cover_id'] neq '0'">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img data-url="{$vo.cover_id|get_cover='path'}" class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165"></a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+            </if>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="lfs" id="vo">
+                 <if condition="$vo['cover_id'] eq '0'">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+                 </if>
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 类风湿 -->
+        <!-- 产后风湿 -->
+       <div class="disease-right chf">
+          <div class="disease-rightup">
+            <volist name="chf" id="vo" >
+             <if condition="$vo['cover_id'] neq '0'">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img data-url="{$vo.cover_id|get_cover='path'}" class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165"></a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+            </if>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="chf" id="vo">
+                 <if condition="$vo['cover_id'] eq '0'">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+                 </if>
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 产后风湿 -->
+       <!-- 强直性 -->
+       <div class="disease-right qzx">
+          <div class="disease-rightup">
+            <volist name="qzx" id="vo" >
+             <if condition="$vo['cover_id'] neq '0'">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">
+               <img data-url="{$vo.cover_id|get_cover='path'}" class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165"></a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+            </if>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="qzx" id="vo">
+                 <if condition="$vo['cover_id'] eq '0'">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+                 </if>
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 强直性 -->
+       <!-- 关节炎 -->
+       <div class="disease-right gjy">
+          <div class="disease-rightup">
+            <volist name="gjy" id="vo" >
+             <if condition="$vo['cover_id'] neq '0'">
+             <div class="disease-img">
+               <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank"><img data-url="{$vo.cover_id|get_cover='path'}" class="scrollLoading" src="__IMG__/zayy/loading.gif" width="165"></a>
+             </div>
+             <div class="rightup-news">
+                <h2><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,15,'utf8'}</a></h2>
+                <p>{$vo.description|mb_substr=0,82,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">【详细】</a></p>
+             </div>
+            </if>
+           </volist>
+          </div>
+          <div class="disease-rightdown">
+             <ul class="d-news">
+              <volist name="gjy" id="vo">
+                 <if condition="$vo['cover_id'] eq '0'">
+                <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="d-tit">{$vo.title|mb_substr=0,12,'utf8'}<span class="time">{$vo.create_time|date='m-d',###}</span></a><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="clickw">咨询专家</a></li>
+                 </if>
+               </volist>
+             </ul>
+          </div>
+       </div>
+       <!-- 关节炎 -->
+    </div>
+    
+ </div>
+ <!-- 中安绿色疗法 -->
+  <div class="container-q diseases">
+    <div class="disease-head">
+        <h2>核心技术—绿色多维疗法</h2>
+        <p>骨病不是治不好 只是方法没选对</p>
+    </div>
+    <div class="index-row"></div>
+    <div class="green-p">
+       {$green.0.description}…<a href="{:U('Home/Index/details',array('id'=>$green[0]['id']))}" class="details">【详细】</a>
+    </div>
+    <div class="green-table"><img data-url="__IMG__/zayy/green-table.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif"></div>
+    <div class="green-content">
+       <div class="advantage">
+          <div class="adv-text">技术<br>优势</div>
+          <div class="bbjz"></div>
+          <div class="qxxs"></div>
+          <div class="pwtz"></div>
+          <div class="patent1"></div>
+          <div class="zssy"></div>
+       </div>
+       <div class="treat">
+        <div class="adv-text treatt">治疗<br>范畴</div>
+        <div class="fsgreen">
+           <div class="treat-up">风湿、类风湿</div>
+           <div class="treat-down">骨质增生（骨刺）</div>
+        </div>
+        <div class="fsgreen">
+           <div class="treat-up">颈、腰椎间盘突出</div>
+           <div class="treat-down">骨性关节炎</div>
+        </div>
+        <div class="fsgreen">
+           <div class="treat-up">产后风湿</div>
+           <div class="treat-down">痛风</div>
+        </div>
+        <div class="fsgreen">
+            <div class="treat-up">强直性脊柱炎</div>
+            <div class="treat-down">更多疾病</div>
+        </div>
+       </div>
+       <div class="tech">
+          <div class="adv-text treatt">技术<br>突破</div>
+          <div class="tech-circle">不手术</div>
+          <div class="tech-circle">针药结合</div>
+          <div class="tech-circle">药效叠加</div>
+          <div class="tech-circle">昆虫入药</div>
+          <div class="tech-circle">穴位注射</div>
+          <div class="tech-circle">专利药物</div>
+       </div>
+       <div class="internet">
+        <span class="int-font">网上预约享受:</span>
+        <em></em><span class="int-free">免挂号费</span>
+        <em></em><span class="int-free">免专家诊查费</span>
+        <em></em><span class="int-free">免排队等候</span>
+      </div>
+      <div class="consult"><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979">向医生咨询绿色疗法</a></div>
+    </div>
+   
+  </div>
+   <!-- 在线预约 -->
+   <a name="booking"></a>
+    <div class="container1 booking">
+      <form action="http://wap.zhonganyiyuan.com//index.php?s=/Home/Index/reg_system"  method="post" onsubmit="return check()">
+          <div class="wrap-book">
+           <div class="book1">
+              <div class="row1"><span class="rowname">姓名:</span><input type="text" id="name" name="name"></div>
+              <div class="row1"><span class="rowname">是否确诊:</span>
+                <span class="formspan"> 是  </span>
+                <input  type="radio" id="confirm" name="confirm"  value="是">
+                <span class="formspan">否 </span>
+                <input  type="radio" id="confirm" name="confirm" value="0" checked>
+              </div>
+           </div>
+            <div class="book1">
+              <div class="row1"><span class="rowname">年龄:</span><input type="text"  id="age" name="age"></div>
+              <div class="row1"><span class="rowname">联系电话:</span><input type="text" id="mobile" name="mobile"></div>
+           </div>
+            <div class="book1">
+              <div class="row1"><span class="rowname">您的性别:</span>
+                 <span class="formspan1"> 男  </span>
+                <input  type="radio" id="confirm" name="sex"  value="1">
+                <span class="formspan1">女 </span>
+                <input  type="radio" id="confirm" name="sex" value="2" checked>
+              </div>
+              <div class="row1"><span class="rowname">病情描述:</span><input type="text" id="details" name="details"></div>
+           </div>
+            <div class="book2">
+               <input type="submit" class="sub-btn" value="提交信息" style="width: 161px;">
+           </div>
+          </div>
+    </form>
+    </div>
+    <!-- 专家团队 -->
+    <div class="container-q diseases">
+        <div class="disease-head">
+            <h2>权威专家</h2>
+            <p>权威专家 用良心看病 品牌成就信赖</p>
+        </div>
+        <div class="index-row"></div>
+        <div class="team-content">
+
+          <!-- 图片切换 -->
+      <!--Luara图片切换骨架begin-->
+    <div class="example1" style="margin: 0 auto;">
+        <ul>
+          <volist name="team" id="vo">
+            <li><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}"><img data-url="{$vo.cover_id|get_cover='path'}" alt="专家" width="930" class="scrollLoading" src="__IMG__/zayy/loading.gif"/></a></li>
+          </volist>
+        </ul>
+        <ol>
+           <volist name="team" id="vo">
+            <li></li>
+           </volist>
+        </ol>
+    </div>
+    <!--Luara图片切换骨架end-->
+    <script>
+        $(function(){
+            <!--调用Luara示例-->
+            $(".example1").luara({width:"930",height:"409",interval:5000,selected:"seleted",deriction:"top"});
+
+        });
+    </script>
+          <!-- 图片切换 -->
+          
+          <div class="online-btn">
+             <a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979" class="online-consult">在线咨询</a>
+             <a href="#booking" class="oneline-booking afocus">在线预约</a>
+          </div>
+        </div>
+    </div>
+    <!-- 当前在线人数 -->
+    <div class="container1 online-num">
+       <div class="wrap-num">
+          <div class="wrap-num1">
+             <div class="num-up">8120</div>
+             <div class="num-down">当前在线人数</div>
+          </div>
+          <div class="wrap-num1">
+             <div class="num-up num-up1">786</div>
+             <div class="num-down">今日成功预约人数</div>
+          </div>
+          <div class="wrap-num1">
+             <div class="num-up num-up2">9835</div>
+             <div class="num-down">近一月就诊人数</div>
+          </div>
+          <div class="wrap-num1">
+                <a href="#booking" class="sub-btn num-btn afocus">无需排队预约通道</a>
+          </div>
+       </div>
+    </div>
+    <!-- 案例分享 -->
+    <div class="container-q case">
+       <div class="case-head">
+          <div class="case-c">
+            <span class="case-tit">康复案例</span>
+            <span class="case-memo">我们说好不算好 患者说好才是真的好</span>
+            <a href="{:U('Home/Index/morelists')}">更多>></a></div>
+       </div>
+       <div class="case-content">
+        <volist name="case" id="vo">
+          <div class="case1">
+            <div class="case1-title">
+            <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,20,'utf8'}</a></div>
+            <div class="case1-con">
+               <div class="case1-img">
+                  <a href="{:U('Home/Index/details',array('id'=>$vo['id']))}"> <img data-url="{$vo.cover_id|get_cover='path'}" width="299" height="157" class="scrollLoading" src="__IMG__/zayy/loading.gif"></a>
+                  <p>{$vo.description|mb_substr=0,55,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a></p>
+               </div>
+               <div class="case-btn"><a href="http://bft.zoosnet.net/LR/Chatpre.aspx?id=BFT58456979">咨询详情</a></div>
+            </div>
+          </div>
+        </volist>
+       </div>
+       <!-- 媒体报道 -->
+       <div class="media-report">
+       <h3>媒体报道</h3>
+       <ul>
+         <li>
+           <a href="http://nm.people.com.cn/n/2014/0807/c196697-21913449.html" target="_blank">
+              <img data-url="__IMG__/zayy/people.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://szb.nmgcb.com.cn/html/2013-05/20/content_59554.htm" target="_blank">
+              <img data-url="__IMG__/zayy/nmgw.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://nmg.sina.com.cn/health/ys/2014-10-16/075224129.html" target="_blank">
+              <img data-url="__IMG__/zayy/sina.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://medicine.nmgnews.com.cn/system/2014/04/03/011436539.shtml" target="_blank">
+              <img data-url="__IMG__/zayy/yiyao.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li style="margin-right: 0;">
+           <a href="http://health.baotounews.com.cn/zhxw/2015/1012/476113.shtml" target="_blank">
+              <img data-url="__IMG__/zayy/baotounews.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://inews.nmgnews.com.cn/system/2014/11/07/011567605.shtml" target="_blank">
+              <img data-url="__IMG__/zayy/nmgnews.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://www.nmg.chinanews.com/show-29-6866-1.html" target="_blank">
+              <img data-url="__IMG__/zayy/chinanews.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://zhongyi.ifeng.com/news/mymy/201111/124466.shtml" target="_blank">
+              <img data-url="__IMG__/zayy/fenghuang.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li>
+           <a href="http://health.takungpao.com/ys/q/2015/0410/2968957.html" target="_blank">
+              <img data-url="__IMG__/zayy/dagong.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+         <li style="margin-right:0">
+           <a href="http://wap.cmread.com/clt/publish/clt/pzx/share/news/index.jsp?c=4777228&WD_CP_ID=000002&from=groupmessage&isappinstalled=0" target="_blank">
+              <img data-url="__IMG__/zayy/hellonmg.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+           </a>
+         </li>
+       </ul>
+       </div>
+       <!-- 媒体报道 -->
+    </div>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript">
+   $(function(){
+    //无缝滚动
+      $('.myscroll').myScroll({
+      speed: 40, //数值越大，速度越慢
+      rowHeight: 26 //li的高度
+      });
+    // 优惠政策
+      $('.tit-right').hover(function(){
+          $('.tit-left').addClass('tit-xz');
+          $('.policy').css('display','block');
+          $('.hnews').css('display','none');
+      },function(){
+          $('.tit-right').addClass('policy-xz');
+      });
+      //院内新闻
+      $('.tit-left').hover(function(){
+          $('.tit-right').removeClass('policy-xz');
+          $('.policy').css('display','none');
+          $('.hnews').css('display','block');
+      },function(){
+          $('.tit-left').removeClass('tit-xz');
+          $('.tit-right').removeClass('policy-xz');
+      });
+      //主治疾病
+      $('.disease-cate').hover(function(){
+           $('.disease-cate').removeClass('cate-xz');
+           $(this).addClass('cate-xz');
+           var cate = $(this).attr('cate');
+           $('.disease-content .disease-right').css('display','none');
+           $('.'+cate).css('display','block');
+      },function(){
+           $(this).addClass('cate-xz');
+          
+      });
+   })
+</script>
+  <!--挂号系统-->
+  <script type="text/javascript">
+      // 挂号系统验证
+      function check(){
+         var rule = /^1[3|4|5|7|8]\d{9}$/;
+         if($('#name').val() == ''){
+            alert('患者姓名不能为空');
+            $('#name').focus();
+            return false;
+         }else if($('#age').val() ==''){
+            alert('患者年龄不能为空');
+            $('#age').focus();
+            return false;
+         }else if($('#mobile').val() ==''){
+            alert('联系电话不能为空');
+            $('#mobile').focus();
+            return false;
+         }else if(!rule.test($('#mobile').val())){
+            alert('请输入正确的联系方式');
+            $('#mobile').focus();
+            return false;
+         }else if($('#details').val() == ''){
+            alert('您哪里不舒服呢?');
+            $('#details').focus();
+            return false;
+         }
+      }
+      $(function(){
+        $('.afocus').click(function(){
+          $('#name').focus();
+          return false;
+        });
+        
+      })
+      
+  </script>
+</body>
+</html>
