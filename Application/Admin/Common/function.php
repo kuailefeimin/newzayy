@@ -49,7 +49,7 @@ function get_list_field($data, $grid){
                 // 替换系统特殊字符串
                 $href   =   str_replace(
                     array('[DELETE]','[EDIT]','[LIST]'),
-                    array('setstatus?status=-1&ids=[id]',
+                    array('setstatus?status=-1&ids=[id]&model=[model_id]',
                     'edit?id=[id]&model=[model_id]&cate_id=[category_id]',
                     'index?pid=[id]&model=[model_id]&cate_id=[category_id]'),
                     $href);

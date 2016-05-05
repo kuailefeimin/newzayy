@@ -168,7 +168,8 @@ class IndexController extends HomeController {
             $hotkey = D('Document')->lists(132);
             $data1 = D('Document')->detail($id);
             $this->assign('hotkey',$hotkey);
-            $data = str_replace("/newzayy", "", $data1);
+            //$data = str_replace("/newzayy", "", $data1);
+            $data = str_replace('"/Uploads', '"/newzayy/Uploads', $data1);
             $this->assign('data',$data);
         }else{
             $this->error('参数错误');
@@ -189,20 +190,20 @@ class IndexController extends HomeController {
     //搜索页
     public function search($p = 1){
         
-        if($_POST['keyword'] == ''){
+        if($_REQUEST['keyword'] == ''){
             $this->error('查询关键词不能为空');
         }else{
-            $map['title'] = array('like','%'.$_POST['keyword'].'%');
+            $map['title'] = array('like','%'.$_REQUEST['keyword'].'%');
             $map['status'] =1;
-            $data = M('Document')->where($map)->select();
+            $data = M('Document')->where($map)->page($p,10)->select();
             $keyword = array(
                 'name'=>$_POST['keyword'],
                 'create_time'=>time(),
                 'ip'=>$_SERVER['REMOTE_ADDR']
                 );
             M('keyword')->add($keyword);
-            // $total = count(M('Document')->where($map)->select());
-            // $this->assign('_page',$this->fpage($total,3));
+            $total = count(M('Document')->where($map)->select());
+            $this->assign('_page',$this->fpage($total,10));
             $this->assign('data',$data);
             $this->display();
         }

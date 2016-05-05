@@ -203,7 +203,7 @@
              <div class="bar-news">
                <dl>
                  <volist name="painful" id="vo" offset="0" length="2">
-                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dt><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,25,'utf8'}</a></dt>
                   <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
                   </dd>
                  </volist>  
@@ -225,7 +225,7 @@
              <div class="bar-news">
                <dl>
                  <volist name="care" id="vo" offset="0" length="2">
-                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dt><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,25,'utf8'}</a></dt>
                   <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
                   </dd>
                  </volist>  
@@ -247,7 +247,7 @@
              <div class="bar-news">
                <dl>
                  <volist name="repeat" id="vo" offset="0" length="2">
-                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dt><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,25,'utf8'}</a></dt>
                   <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
                   </dd>
                  </volist>  
@@ -269,7 +269,7 @@
              <div class="bar-news">
                <dl>
                  <volist name="cost" id="vo" offset="0" length="2">
-                  <dt>{$vo.title|mb_substr=0,25,'utf8'}</dt>
+                  <dt><a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" target="_blank">{$vo.title|mb_substr=0,25,'utf8'}</a></dt>
                   <dd>{$vo.description|mb_substr=0,48,'utf8'}...<a href="{:U('Home/Index/details',array('id'=>$vo['id']))}" class="details">[详细]</a>
                   </dd>
                  </volist>  

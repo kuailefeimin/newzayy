@@ -83,7 +83,16 @@ $(function(){
             $("#search").click();
         }
     });
-
+     //确认删除
+    $("td a:nth-child(2)").click(function(){
+        //event.preventDefault();
+        if(!confirm('您确认要删除这条用户数据吗？删除后将不可恢复！')){
+            window.event.returnValue = false;
+        }else{
+            return true;
+        }
+        
+    });
 })
 </script>
 </block>

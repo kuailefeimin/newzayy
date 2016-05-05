@@ -19,6 +19,17 @@ input[name=sex]{
     float: left;
     margin-top: 11px;
 }
+.treatmethod{
+    background:#006d78;
+    width:944px;
+    margin-bottom: 15px;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    color:#fff;
+    margin-left: 47px;
+    font-size:18px;
+}
 .formspan{
         width: 30px;
     display: inline-block;
@@ -48,6 +59,7 @@ input[name=sex]{
     <video width="100%"  controls>
       <source src="./lecture.mp4" type="video/mp4">
     </video>
+    <!-- <embed src="./lecture.mp4" width="100%" height="100%" autostart=0 loop="false"></embed> -->
     <div class="video-tit">类风湿专题讲座</div>
     </div>
     <div class="news-center">
@@ -307,7 +319,11 @@ input[name=sex]{
     <div class="green-p">
        {$green.0.description}…<a href="{:U('Home/Index/details',array('id'=>$green[0]['id']))}" class="details">【详细】</a>
     </div>
-    <div class="green-table"><img data-url="__IMG__/zayy/green-table.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif"></div>
+    <div class="container1 treatmethod">
+    “多维疗法”和传统疗法的对比
+    </div>
+    <div class="green-table"><img data-url="__IMG__/zayy/green-table.jpg" class="scrollLoading" src="__IMG__/zayy/loading.gif">
+    </div>
     <div class="green-content">
        <div class="advantage">
           <div class="adv-text">技术<br>优势</div>

@@ -163,7 +163,20 @@ class ThinkController extends AdminController {
      * @author huajie <banhuajie@163.com>
      */
     public function setStatus($model='Document'){
-        return parent::setStatus($model);
+        if($model == 4){
+            $ids = isset($_GET['ids']) ? $_GET['ids'] : 0 ;
+            
+            $res = M('keyword')->where(array('id'=>$ids))->delete();
+
+            if($res){
+                $this->success('删除成功');
+            }else{
+                $this->error('删除失败');
+            }
+        }else{
+            return parent::setStatus($model);
+        }
+        
     }
     
     public function edit($model = null, $id = 0){
